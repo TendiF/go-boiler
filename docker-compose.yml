@@ -1,0 +1,22 @@
+version: "2"
+services:
+  nginx:
+    image: nginx:latest
+    container_name: plat_adm_nginx
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 8000:80
+  golang:
+    image: golang:latest
+    container_name: plat_adm_golang
+    volumes:
+      - ./golang.sh:/go/golang.sh
+      - ./src/go/app:/go/src/app/
+      - ./src/go/vendor/pkg:/go/pkg
+      - ./src/go/vendor/src:/go/src
+    command: bash -c "/go/golang.sh"
+    # command: bash -c "go get -u github.com/gin-gonic/gin && go run /go/src/app/router.go"
+    ports:
+      - 3000:3000
