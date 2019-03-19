@@ -4,10 +4,11 @@ import (
   "net/http"
   "github.com/gin-gonic/gin"
   "../database"
+  "fmt"
 )
 
 func GetIndex(c *gin.Context) {
-	c.JSON(http.StatusOK, "hello world!!!")
-
+  fmt.Println("id__")
   database.ConnectDB()
+	c.JSON(http.StatusOK, "hello world!!!")
 }
