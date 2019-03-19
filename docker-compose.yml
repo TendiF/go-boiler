@@ -20,3 +20,15 @@ services:
     # command: bash -c "go get -u github.com/gin-gonic/gin && go run /go/src/app/router.go"
     ports:
       - 3000:3000
+  postgres:
+    image: postgres:11.2-alpine
+    container_name: plat_adm_db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: rahasia123
+  adminer:
+    image: adminer
+    container_name: plat_adm_adminer
+    restart: always
+    ports:
+      - 8080:8080
