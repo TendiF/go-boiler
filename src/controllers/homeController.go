@@ -6,5 +6,5 @@ import (
 )
 
 func GetHome(c *gin.Context) {
-	c.JSON(http.StatusOK, "hello home")
+	c.JSON(http.StatusOK, "hello home!!!")
 }

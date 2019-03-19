@@ -10,5 +10,5 @@ func main() {
 
 	router.GET("/", controllers.GetIndex)
 	router.GET("/home", controllers.GetHome)
-	router.Run(":3000")
+	router.Run(":4000")
 }

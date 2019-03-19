@@ -13,15 +13,15 @@ services:
     container_name: plat_adm_golang
     volumes:
       - ./golang.sh:/go/golang.sh
-      - ./src/go/app:/go/src/app/
-      - ./src/go/vendor/pkg:/go/pkg
-      - ./src/go/vendor/src:/go/src
+      - ./src/:/go/admin-api/
+      - ./vendor/go/pkg:/go/pkg
+      - ./vendor/go/src:/go/src
     command: bash -c "/go/golang.sh"
     links:
       - database
     # command: bash -c "go get -u github.com/gin-gonic/gin && go run /go/src/app/router.go"
     ports:
-      - 3000:3000
+      - 3000:4000
   database:
     image: postgres:11.2-alpine
     container_name: plat_adm_db

@@ -1,1 +1,3 @@
 src/go/vendor/*
+vendor/*
+src/tmp/*

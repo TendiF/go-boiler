@@ -1,5 +1,9 @@
 if [ ! -d "/go/src/github.com" ]; then
   echo 'go get'
   go get -u github.com/gin-gonic/gin
+  echo 'finish get'
 fi
-go run /go/src/app/router.go
+go get github.com/pilu/fresh
+# go run /go/src/admin-api/router.go
+# /go/bin/gin run /go/src/admin-api/router.go
+cd /go/admin-api/ && fresh
