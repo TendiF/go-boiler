@@ -21,7 +21,7 @@ services:
       - database
     # command: bash -c "go get -u github.com/gin-gonic/gin && go run /go/src/app/router.go"
     ports:
-      - 3000:4000
+      - 3000:3000
   database:
     image: postgres:11.2-alpine
     container_name: plat_adm_db
