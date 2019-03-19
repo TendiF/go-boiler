@@ -1,9 +1,8 @@
 Cara menjalankan
 
 1. $ docker-compose up
-2. Tunggu beberapa saat
-3. $ docker inspect plat_adm_db | Grep "IPAddress"
-4. Setelah dapat IP, itu IP untuk database bisa dicheck via adminer localhost:8080
+2. Tunggu beberapa saat, bisa akses localhost:3000
+3. Sudah autoreload
 
 incase gagal
 1. $ docker-compose down
