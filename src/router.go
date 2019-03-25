@@ -12,5 +12,6 @@ func main() {
 	router.GET("/", controllers.GetIndex)
 	router.GET("/home", controllers.GetHome)
 	router.POST("/register", authController.RegisterUser)
+	router.POST("/login", authController.LoginUser)
 	router.Run(":3000")
 }
