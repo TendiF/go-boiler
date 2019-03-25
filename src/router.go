@@ -2,6 +2,7 @@ package main
 
 import (
   "./controllers"
+  "./controllers/auth"
 	"github.com/gin-gonic/gin"
 )
 
@@ -10,5 +11,6 @@ func main() {
 
 	router.GET("/", controllers.GetIndex)
 	router.GET("/home", controllers.GetHome)
+	router.POST("/register", authController.RegisterUser)
 	router.Run(":3000")
 }
